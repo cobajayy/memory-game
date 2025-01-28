@@ -1,0 +1,11 @@
+body{
+    background-color: yellow;
+    color: red;
+    text-align: center;
+}
+
+.game-button{
+    height: 60px;
+    width: 60px;
+    display: flexbox;
+}
