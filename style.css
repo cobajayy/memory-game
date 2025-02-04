@@ -14,6 +14,11 @@ body{
     padding: 20px;
 }
 
+ul {
+    list-style-type: circle;
+    font-size: 20px;
+}
+
 img {
     width: 100%;
     height: 100%;
@@ -30,18 +35,11 @@ img {
     gap: 90px
   }
 
-#timer {
-    /* margin-right: 0 50px 0 0; */
-}
-
-#wrong-guess{
-    /* margin-left: 0 30px 0 0; */
-}
 .board {
     height: 600px;
     width: 600px;
     display: grid;
-    grid-template-columns: repeat(5, 100px);
+    grid-template-columns: repeat(4, 120px);
     /* display: flex; */
     /* flex-wrap: wrap; */
     /* margin: auto; */
@@ -88,7 +86,7 @@ img {
     background-color: hsl(0, 4%, 26%);
 }
 
-#play-again { 
+#play { 
     background-color: hsl(0, 90%, 46%);
     color: white;
     font-size: 20px;
@@ -100,10 +98,30 @@ img {
     /* align-items: baseline; */
 }
 
-#play-again:hover{
+#play:hover{
     background-color: hsl(0, 75%, 57%);
 }
-/* 
+
+#start { 
+    background-color: hsl(0, 90%, 46%);
+    color: white;
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* align-items: baseline; */
+}
+
+#start:hover{
+    background-color: hsl(0, 75%, 57%);
+}
+
 .hidden {
     visibility: hidden;
-} */
+}
+
+.hidden-after::after {
+    visibility: hidden;
+}
