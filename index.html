@@ -1,223 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Memory Game</title>
-</head>
-<body>
-    <h1 id="main-title">Memory Game</h1>
-    <h2 id="message" class="hidden">Message Goes here</h2>
-    <h3 id="timer">Timer goes here</h3>
-    <h3 id="wrong-guess">Wrong Guess Count goes here</h3>
-    
-    <div class="board">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="app.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Memory Game</title>
+    </head>
+    <body>
+        <h1 id="main-title">Memory Game</h1>
+        <h2 id="message" class="hidden">Message Goes here</h2>
+      
+        <section id="nav">
+            <div>
+                <div><span id="timer">00</span></div>
+            </div>
 
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-binoculars.jpg" 
-            alt="Monkey using binoculars">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-ballon.jpg" 
-            alt="Monkey with red ballon">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-banana.jpg" 
-            alt="Monkey eating a banana">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-baseball-hat.png" 
-            alt="Monkey wearing a baseball hat">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-bike.jpg" 
-            alt="Monkey riding a bicycle">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-cake.png" 
-            alt="Monkey decorating a cake">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-firetruck.jpg" 
-            alt="Monkey on top of a firetruck">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-reading-map.jpg" 
-            alt="Monkey reading a map">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-yellow-hat.jpg" 
-            alt="Monkey wearing a yellow hat">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/man-yellow-hat.jpg" 
-            alt="Monkey with man with a yellow hat">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-binoculars.jpg" 
-            alt="Monkey using binoculars">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-ballon.jpg" 
-            alt="Monkey with red ballon">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-banana.jpg" 
-            alt="Monkey eating a banana">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-baseball-hat.png" 
-            alt="Monkey wearing a baseball hat">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-bike.jpg" 
-            alt="Monkey riding a bicycle">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-cake.png" 
-            alt="Monkey decorating a cake">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-firetruck.jpg" 
-            alt="Monkey on top of a firetruck">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-reading-map.jpg" 
-            alt="Monkey reading a map">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/george-yellow-hat.jpg" 
-            alt="Monkey wearing a yellow hat">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-        <div class="card">
-            <img 
-            class="front"
-            src="img/man-yellow-hat.jpg" 
-            alt="Monkey with man with a yellow hat">
-            <img 
-            class="back"
-            src="img/george-face.png" 
-            alt="Monkey Face">
-        </div>
-    </div>  
-    
-    <button id="play-again" class="hidden">Play Again</button>
+            <div>
+                <div>Wrong Guess: <span id="wrong-guess">0</span>
+                </div>
+            </div>
+            <div>
+                <div>Pair Count: <span id ="pair-count">0</span></div>
+            </div>
+        </section>
+        
+        <section class="board">
 
-</body>
+            <div class="card" data-img="george-binoculars">
+                <img 
+                class="front"
+                src="img/george-binoculars.jpg" 
+                alt="Monkey using binoculars">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-balloon">
+                <img 
+                class="front"
+                src="img/george-ballon.jpg" 
+                alt="Monkey with red balloon">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-banana">
+                <img 
+                class="front"
+                src="img/george-banana.jpg" 
+                alt="Monkey eating a banana">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-baseball-hat">
+                <img 
+                class="front"
+                src="img/george-baseball-hat.png" 
+                alt="Monkey wearing a baseball hat">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-bike">
+                <img 
+                class="front"
+                src="img/george-bike.jpg" 
+                alt="Monkey riding a bicycle">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-cake">
+                <img 
+                class="front"
+                src="img/george-cake.png" 
+                alt="Monkey decorating a cake">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-firetruck">
+                <img 
+                class="front"
+                src="img/george-firetruck.jpg" 
+                alt="Monkey on top of a firetruck">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-reading-map">
+                <img 
+                class="front"
+                src="img/george-reading-map.jpg" 
+                alt="Monkey reading a map">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-yellow-hat">
+                <img 
+                class="front"
+                src="img/george-yellow-hat.jpg" 
+                alt="Monkey wearing a yellow hat">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="man-yellow-hat">
+                <img 
+                class="front"
+                src="img/man-yellow-hat.jpg" 
+                alt="Monkey with man with a yellow hat">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-binoculars">
+                <img 
+                class="front"
+                src="img/george-binoculars.jpg" 
+                alt="Monkey using binoculars">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-balloon">
+                <img 
+                class="front"
+                src="img/george-ballon.jpg" 
+                alt="Monkey with red balloon">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-banana">
+                <img 
+                class="front"
+                src="img/george-banana.jpg" 
+                alt="Monkey eating a banana">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-baseball-hat">
+                <img 
+                class="front"
+                src="img/george-baseball-hat.png" 
+                alt="Monkey wearing a baseball hat">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-bike">
+                <img 
+                class="front"
+                src="img/george-bike.jpg" 
+                alt="Monkey riding a bicycle">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-cake">
+                <img 
+                class="front"
+                src="img/george-cake.png" 
+                alt="Monkey decorating a cake">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-firetruck">
+                <img 
+                class="front"
+                src="img/george-firetruck.jpg" 
+                alt="Monkey on top of a firetruck">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-reading-map">
+                <img 
+                class="front"
+                src="img/george-reading-map.jpg" 
+                alt="Monkey reading a map">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="george-yellow-hat">
+                <img 
+                class="front"
+                src="img/george-yellow-hat.jpg" 
+                alt="Monkey wearing a yellow hat">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+            <div class="card" data-img="man-yellow-hat">
+                <img 
+                class="front"
+                src="img/man-yellow-hat.jpg" 
+                alt="Monkey with man with a yellow hat">
+                <img 
+                class="back"
+                src="img/george-face.png" 
+                alt="Monkey Face">
+            </div>
+        </section>  
+        
+        <button id="play-again" class="hidden">Play Again</button>
+
+    </body>
 </html>
