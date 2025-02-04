@@ -19,7 +19,6 @@ let firstCard;
 let secondCard; 
 let revealCard = false;
 let lockBoard = false;
-let gameOver;
 
 const cards = [
     {
@@ -79,7 +78,7 @@ const init = () => {
     resetBoard()
     state.pairCount = 0
     state.wrongGuess = 0
-    state.timeRemain = 60
+    state.timeRemain = 30
     clearInterval(timer)
     timeClock()
     render()
@@ -132,31 +131,33 @@ function compare() {
     }
 
 function populateBoard() {
+
     shuffleCards();
     boardElement.innerHTML = "";
+
     cards.forEach(card => {
      
-        const cardDiv = document.createElement("div");
-        cardDiv.classList.add("card");
-        cardDiv.setAttribute("data-img", card.src);
+        const cardDiv = document.createElement("div")
+        cardDiv.classList.add("card")
+        cardDiv.setAttribute("data-img", card.src)
 
-        cardDiv.addEventListener("click", flipCard);
+        cardDiv.addEventListener("click", flipCard)
 
-        const backImg = document.createElement("img");
-        backImg.classList.add("back");
-        backImg.setAttribute("src", "img/george-face.png");
-        backImg.setAttribute("alt", "Monkey Face");
+        const backImg = document.createElement("img")
+        backImg.classList.add("back")
+        backImg.setAttribute("src", "img/george-face.png")
+        backImg.setAttribute("alt", "Monkey Face")
         
-        const frontImg = document.createElement("img");
-        frontImg.classList.add("front");
-        const src = "img/" + card.src;
-        frontImg.setAttribute("src", src);
-        frontImg.setAttribute("alt", card.alt);
+        const frontImg = document.createElement("img")
+        frontImg.classList.add("front")
+        const src = "img/" + card.src
+        frontImg.setAttribute("src", src)
+        frontImg.setAttribute("alt", card.alt)
         
-        cardDiv.appendChild(frontImg);
-        cardDiv.appendChild(backImg);
+        cardDiv.appendChild(frontImg)
+        cardDiv.appendChild(backImg)
 
-        boardElement.appendChild(cardDiv);
+        boardElement.appendChild(cardDiv)
     })
 }
 
@@ -211,11 +212,26 @@ const timeClock = () => {
     }, 1000)
 }
 
+
 playElement.addEventListener("click", () => {
     instructionsElement.remove();
 });
 
 playElement.addEventListener("click", init)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-----------Graveyard--------------------*/
 // function render() {
@@ -313,3 +329,5 @@ playElement.addEventListener("click", init)
 
         // playElement.classList.add("hidden")
     // instructionsElement.classList.add("hidden-after")
+
+    // let gameOver;
