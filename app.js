@@ -78,7 +78,7 @@ const init = () => {
     resetBoard()
     state.pairCount = 0
     state.wrongGuess = 0
-    state.timeRemain = 30
+    state.timeRemain = 60
     clearInterval(timer)
     timeClock()
     render()
@@ -92,8 +92,6 @@ function flipCard() {
     if(!revealCard) { 
         revealCard = true; 
         firstCard = this; 
-
-
     } else {
         revealCard = false; 
         secondCard = this; 
